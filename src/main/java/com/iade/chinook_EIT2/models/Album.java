@@ -22,8 +22,8 @@ public class Album {
     @Column(name="title")
     private String title;
 
-    @Column(name="cover")
-    private String coverURL;
+    //@Column(name="cover")
+    //private String coverURL;
 
     @ManyToOne
     @JoinColumn(name="artistid")
@@ -40,9 +40,9 @@ public class Album {
         return title;
     }
 
-    public String getCoverURL() {
-        return coverURL;
-    }
+    //public String getCoverURL() {
+    //    return coverURL;
+   // }
 
     public Artist getArtist() {
         return artist;
