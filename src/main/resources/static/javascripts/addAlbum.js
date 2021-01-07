@@ -25,7 +25,7 @@ async function addAlbum() {
             title: document.getElementById("title").value,
             artist: { id: parseInt(document.getElementById("artist").value) }
         }
-        alert(JSON.stringify(album));
+        console.log(JSON.stringify(album));
         let result = await $.ajax({
             url: "/api/albums",
             method: "post",
@@ -33,7 +33,10 @@ async function addAlbum() {
             data:JSON.stringify(album),
             contentType: "application/json"
         });
-        alert(JSON.stringify(result));
+        console.log(JSON.stringify(result));
+        // Change to album page
+        sessionStorage.setItem("albumId",result.id);
+        window.location = "album.html";
     } catch(err) {
         console.log(err);
         // mensagem para o utilizador

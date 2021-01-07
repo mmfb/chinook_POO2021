@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,5 +38,13 @@ public class AlbumController {
         if (_album.isEmpty()) throw new NotFoundException(""+id,"Album","id");
         else return _album.get() ;
     }
+
+    @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Album saveAlbum(@RequestBody Album newAlbum) {
+        logger.info("Saving album with title: "+newAlbum.getTitle());
+        Album album = albumRepository.save(newAlbum);
+        return album;
+    }
+   
 
 }

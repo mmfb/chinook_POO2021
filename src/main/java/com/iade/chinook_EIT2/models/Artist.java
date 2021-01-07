@@ -39,6 +39,10 @@ public class Artist {
         return name;
     }
 
+    public List<Album> getAlbuns() {
+        return albuns;
+    }
+
     // Se calhar nem precisamos
     public Artist(String name) {
         this.name = name;
