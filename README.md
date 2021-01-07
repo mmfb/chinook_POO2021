@@ -4,6 +4,10 @@ Base de dados disponível neste link:
 
 https://github.com/cwoodruff/ChinookDatabase/tree/master/Scripts
 
+Documentação REST disponível neste link:
+
+https://docs.google.com/document/d/1RfhhG3tyc4Aqku7Wp4SsPe0cHUaLcIKlasDKMPHQ1Uc/edit?usp=sharing
+
 ### Destaque de alguns pontos falados em aula
 
 - Os nomes das colunas (@Column(name="...")) têm de ser clocados em letra minúscula de outra forma spring-boot altera os nomes. Não se preocupem com o facto de não estar em letra minúscula na BD pois o sql por default não é case sensitive 
