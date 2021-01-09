@@ -4,6 +4,10 @@ Base de dados disponível neste link:
 
 https://github.com/cwoodruff/ChinookDatabase/tree/master/Scripts
 
+Diagrama da Base de dados disponível neste link:
+
+http://schemaspy.org/sample/relationships.html
+
 Documentação REST disponível neste link:
 
 https://docs.google.com/document/d/1RfhhG3tyc4Aqku7Wp4SsPe0cHUaLcIKlasDKMPHQ1Uc/edit?usp=sharing
