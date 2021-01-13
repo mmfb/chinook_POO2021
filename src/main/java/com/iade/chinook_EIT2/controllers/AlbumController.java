@@ -5,6 +5,7 @@ import java.util.Optional;
 import com.iade.chinook_EIT2.models.Album;
 import com.iade.chinook_EIT2.models.exceptions.NotFoundException;
 import com.iade.chinook_EIT2.models.repositories.AlbumRepository;
+import com.iade.chinook_EIT2.models.views.TrackView;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,5 +47,12 @@ public class AlbumController {
         return album;
     }
    
+
+
+    @GetMapping(path = "/{id}/tracks", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<TrackView> getAlbumTracks(@PathVariable int id) {
+        logger.info("Sending all album tracks for album with id "+id);
+        return albumRepository.findAlbumTracks(id);
+    }
 
 }
