@@ -1,7 +1,7 @@
 package com.iade.chinook_EIT2.models.repositories;
 
 import com.iade.chinook_EIT2.models.Album;
-import com.iade.chinook_EIT2.models.views.TrackSaveView;
+import com.iade.chinook_EIT2.models.views.TrackFullView;
 import com.iade.chinook_EIT2.models.views.TrackView;
 
 import org.springframework.data.jpa.repository.Modifying;
@@ -28,5 +28,5 @@ public interface AlbumRepository extends CrudRepository<Album, Integer> {
     @Modifying
     @Transactional
     @Query(value=saveTrackQuery, nativeQuery=true)
-    int saveAlbumTrack(@Param("albumId") int albumId, @Param("track") TrackSaveView track);
+    int saveAlbumTrack(@Param("albumId") int albumId, @Param("track") TrackFullView track);
 }

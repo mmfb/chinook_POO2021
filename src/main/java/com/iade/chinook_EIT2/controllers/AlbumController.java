@@ -5,7 +5,7 @@ import java.util.Optional;
 import com.iade.chinook_EIT2.models.Album;
 import com.iade.chinook_EIT2.models.exceptions.NotFoundException;
 import com.iade.chinook_EIT2.models.repositories.AlbumRepository;
-import com.iade.chinook_EIT2.models.views.TrackSaveView;
+import com.iade.chinook_EIT2.models.views.TrackFullView;
 import com.iade.chinook_EIT2.models.views.TrackView;
 
 import org.slf4j.Logger;
@@ -57,7 +57,7 @@ public class AlbumController {
     }
 
     @PostMapping(path = "/{id}/tracks", produces= MediaType.APPLICATION_JSON_VALUE)
-    public int saveAlbumTrack(@PathVariable int id, @RequestBody TrackSaveView track) {
+    public int saveAlbumTrack(@PathVariable int id, @RequestBody TrackFullView track) {
         logger.info("Saving new track on album with id: "+id);
         logger.info(track.toString());
         return albumRepository.saveAlbumTrack(id,track);

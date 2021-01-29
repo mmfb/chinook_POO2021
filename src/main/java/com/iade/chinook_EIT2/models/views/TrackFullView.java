@@ -2,7 +2,7 @@ package com.iade.chinook_EIT2.models.views;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-public class TrackSaveView {
+public class TrackFullView {
     private int id;
     private String name;
     private int albumId;
@@ -13,7 +13,7 @@ public class TrackSaveView {
     private int bytes;
     private double price;
     
-    public TrackSaveView() {}
+    public TrackFullView() {}
 
     public int getId() {
         return id;

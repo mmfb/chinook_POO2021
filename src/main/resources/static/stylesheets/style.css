@@ -19,3 +19,13 @@
     background-color: blue;
     width: 18%;
  }
+
+td, th {
+   text-align: center;
+   padding: 3px;
+   border: 2px solid darkred;
+ }
+
+ th {
+    font-size: 1.5em;
+ }
