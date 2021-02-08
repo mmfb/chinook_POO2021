@@ -37,7 +37,7 @@ public class AlbumController {
     public Album getUnit(@PathVariable int id) throws NotFoundException {
         logger.info("Sending album with id "+id);
         Optional<Album> _album = albumRepository.findById(id);
-        if (_album.isEmpty()) throw new NotFoundException(""+id,"Album","id");
+        if (!_album.isPresent()) throw new NotFoundException(""+id,"Album","id");
         else return _album.get() ;
     }
 
