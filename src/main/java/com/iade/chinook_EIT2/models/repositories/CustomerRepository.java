@@ -7,12 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CustomerRepository extends CrudRepository<Customer, Integer> {
-    String statsQuery = "select customer.CustomerId  AS id, FirstName, LastName, "+
-    "SUM(invoiceline.Quantity) AS total, SUM(invoiceline.Quantity*invoiceline.UnitPrice) AS cost "+
-    "FROM customer, invoice, invoiceline "+
-    "WHERE customer.CustomerId = invoice.CustomerId "+
-    "AND invoice.InvoiceId = invoiceline.InvoiceId "+
-    "group by customer.CustomerId";
+    String statsQuery = "select Customer.CustomerId  AS id, FirstName, LastName, "+
+    "SUM(InvoiceLine.Quantity) AS total, SUM(InvoiceLine.Quantity*InvoiceLine.UnitPrice) AS cost "+
+    "FROM Customer, Invoice, InvoiceLine "+
+    "WHERE Customer.CustomerId = Invoice.CustomerId "+
+    "AND Invoice.InvoiceId = InvoiceLine.InvoiceId "+
+    "group by Customer.CustomerId";
     
     @Query(value=statsQuery, nativeQuery=true)
     Iterable<InvoiceStatistcsView> getInvoiceStatistics();
