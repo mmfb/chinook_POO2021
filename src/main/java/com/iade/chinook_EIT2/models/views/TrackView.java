@@ -1,7 +1,7 @@
 package com.iade.chinook_EIT2.models.views;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+//import javax.persistence.EnumType;
+//import javax.persistence.Enumerated;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.iade.chinook_EIT2.models.Genre;

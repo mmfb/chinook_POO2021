@@ -1,7 +1,5 @@
 package com.iade.chinook_EIT2.models.views;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 public class TrackFullView {
     private int id;
     private String name;

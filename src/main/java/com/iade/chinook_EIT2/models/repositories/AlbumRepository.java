@@ -11,12 +11,12 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 public interface AlbumRepository extends CrudRepository<Album, Integer> {
-    String trackQuery = "SELECT  TrackId as id, track.Name as name, UnitPrice as price, "+
-    "mediatype.Name as mediaType, genre.Name as genre " +
-    "FROM track, mediatype, genre "+
-    "WHERE track.GenreId = genre.GenreId " + 
-    "AND track.MediaTypeId = mediatype.MediaTypeId "+
-    "AND track.AlbumId = :albumId";
+    String trackQuery = "SELECT  TrackId as id, Track.Name as name, UnitPrice as price, "+
+    "MediaType.Name as mediaType, Genre.Name as genre " +
+    "FROM Track, MediaType, Genre "+
+    "WHERE Track.GenreId = Genre.GenreId " + 
+    "AND Track.MediaTypeId = MediaType.MediaTypeId "+
+    "AND Track.AlbumId = :albumId";
 
     @Query(value=trackQuery, nativeQuery=true)
     Iterable<TrackView> findAlbumTracks(@Param("albumId") int albumId);

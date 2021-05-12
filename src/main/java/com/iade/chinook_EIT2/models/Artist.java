@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name="artist")
+@Table(name="Artist")
 public class Artist {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
