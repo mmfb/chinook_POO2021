@@ -12,7 +12,7 @@ http://schemaspy.org/sample/relationships.html
 
 Documentação REST disponível neste link:
 
-https://docs.google.com/document/d/1RfhhG3tyc4Aqku7Wp4SsPe0cHUaLcIKlasDKMPHQ1Uc/edit?usp=sharing
+https://docs.google.com/document/d/1gViN7kRhEMq9jiIjk5eDA5ctw39OcliWW7jO5f4-4ho/edit
 
 ### Destaque de alguns pontos falados em aula
 
